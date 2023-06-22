@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/practice/META"
+  "_build/install/default/lib/practice/dune-package"
+  "_build/install/default/lib/practice/opam"
+]
+bin: [
+  "_build/install/default/bin/practice"
+]
