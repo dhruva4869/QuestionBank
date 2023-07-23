@@ -105,7 +105,7 @@ let generate_latex_file (bank : question_bank) (topic : string) (qids : string l
   in
   process_questions qids
 
-(* Command line options *)
+
 let topic_name = ref ""
 let question_ids_to_add = ref []
 let answer_ids_to_add = ref []  
@@ -136,35 +136,33 @@ let main (bank : question_bank) : unit =
       exit 1;
     );
 
-    (* Generate LaTeX file *)
     let include_answers_str = if !include_answers then "yes" else "no" in
-  let prefixed_qids = List.map (fun qid -> !topic_name ^ qid) !question_ids_to_add in
-  print_endline ("Generating LaTeX file: " ^ !filename);
-  print_endline ("Topic: " ^ !topic_name);
-  print_endline ("Question IDs: " ^ String.concat "," prefixed_qids);
-  print_endline ("Include Answers: " ^ include_answers_str);
-  generate_latex_file bank !topic_name prefixed_qids !filename !include_answers;
-  print_endline "LaTeX file generated.";
-  exit 0;
+      let prefixed_qids = List.map (fun qid -> !topic_name ^ qid) !question_ids_to_add in
+      print_endline ("Generating LaTeX file: " ^ !filename);
+      print_endline ("Topic: " ^ !topic_name);
+      print_endline ("Question IDs: " ^ String.concat "," prefixed_qids);
+      print_endline ("Include Answers: " ^ include_answers_str);
+      generate_latex_file bank !topic_name prefixed_qids !filename !include_answers;
+      print_endline "LaTeX file generated.";
+      exit 0;
 
   );
 
-  (* Add multiple questions and answers *)
   let rec add_questions_answers qids aids =
     match qids, aids with
     | [], [] -> ()
     | qid :: qrest, aid :: arest ->
-      let topic_and_qid = !topic_name ^ qid in  (* Combine topic name and question ID *)
+      let topic_and_qid = !topic_name ^ qid in  
       print_string ("Enter question for ID " ^ topic_and_qid ^ ": ");
       let question_text = read_line () in
-      add_question bank topic_and_qid question_text;  (* Pass the combined ID to add_question *)
+      add_question bank topic_and_qid question_text;  
       print_endline ("Question added with ID: " ^ topic_and_qid);
       print_newline ();
 
-      let topic_and_aid = !topic_name ^ aid in  (* Combine topic name and answer ID *)
+      let topic_and_aid = !topic_name ^ aid in  
       print_string ("Enter answer for question ID " ^ topic_and_aid ^ ": ");
       let answer_text = read_line () in
-      add_answer bank topic_and_aid answer_text;  (* Pass the combined ID to add_answer *)
+      add_answer bank topic_and_aid answer_text; 
       print_endline "Answer added.";
       print_newline ();
 
