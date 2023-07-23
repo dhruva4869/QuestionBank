@@ -171,7 +171,6 @@ let main (bank : question_bank) : unit =
       print_endline "Invalid input. Number of question IDs should match the number of answer IDs.";
       exit 1
   in
-
   add_questions_answers !question_ids_to_add !answer_ids_to_add;
 ;;
 
@@ -181,4 +180,3 @@ let () =
   main question_bank;
   ignore (Sqlite3.db_close question_bank.db);
   print_endline "Goodbye!"
-
