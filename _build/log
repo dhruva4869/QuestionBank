@@ -1,9 +1,9 @@
-# dune exec ./bin/main.exe
+# dune exec ./bin/main.exe -- -gen trial_algo.tex -t WA -q 1,2 -a 1,2
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /home/okay4869/my_project/practice
 # Auto-detected concurrency: 12
-$ /home/okay4869/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_04d3c1_output
+$ /home/okay4869/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_139fae_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
