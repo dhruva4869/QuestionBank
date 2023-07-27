@@ -41,9 +41,11 @@ Note that, the topic name must actually contain the respective questions in the 
 `dune exec ./bin/main.exe -- -gen OS3.tex -t OS -q 1,2 -include` <br></br>
 `dune exec ./bin/main.exe -- -gen OS3.tex -t OS -q 1,2` <br></br>
 
-Image Illustrating: <br></br>![sample](https://github.com/dhruva4869/QuestionBank/assets/101694640/fc968213-31de-4500-ae89-299e2109a88d) <br></br>
+Image Illustrating: <br></br>![sample](https://github.com/dhruva4869/QuestionBank/assets/101694640/e164a3b6-7725-4565-9722-72054348af39)
+<br></br>
 How the Output looks: (After adding beginning and ending tags in Latex) <br></br>
-![op](https://github.com/dhruva4869/QuestionBank/assets/101694640/d8ac7a64-0cd1-47c6-b28f-f7dd2a67a481)
+![op](https://github.com/dhruva4869/QuestionBank/assets/101694640/f4180396-d898-457b-881d-48225d7564b2)
+
 
 
 That marks the end of usage for this program. Hopefully this helped.
