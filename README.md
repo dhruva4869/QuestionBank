@@ -35,7 +35,7 @@ Sample usage: (For creating questions 1,2 for the topic OS): <br></br>
 -include includes answers in Latex File. IF we DO NOT WANT ANSWERS, in out question bank, we can simply remove include tag <br></br>
 `dune exec ./bin/main.exe -- -gen "LATEX_FILE.tex" -t "TOPIC_NAME" -q "COMMA SEPARATED QUES IDS"` <br></br>
 
-Sample usage: (For creating a latex file named "mypaper.tex" including questions (and answers) for the Topic Name OS):
+Sample usage: (For creating a latex file named "OS3.tex" including questions (and answers) for the Topic Name OS):
 Note that, the topic name must actually contain the respective questions in the question bank.<br></br>
 
 `dune exec ./bin/main.exe -- -gen OS3.tex -t OS -q 1,2 -include` <br></br>
